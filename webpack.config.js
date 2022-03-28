@@ -13,7 +13,8 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', 'jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+        modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
     },
     devServer: {
         static: path.resolve(__dirname, 'public'),
