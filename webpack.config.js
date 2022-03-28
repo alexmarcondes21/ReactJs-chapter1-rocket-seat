@@ -5,8 +5,8 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 
 module.exports = {
-    mode: isDevelopment ? 'development' : 'production' ,
-    devtool: isDevelopment ? 'eval-source-map' : 'source-map' ,
+    mode: isDevelopment ? 'development' : 'production',
+    devtool: isDevelopment ? 'eval-source-map' : 'source-map',
     entry: path.resolve(__dirname, 'src', 'index.jsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,6 +16,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
         modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
     },
+    
     devServer: {
         static: path.resolve(__dirname, 'public'),
     },
@@ -34,7 +35,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                use: ['style-loader' , 'css-loader' , 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     }
