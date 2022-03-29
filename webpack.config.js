@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 
+
 module.exports = {
     mode: isDevelopment ? 'development' : 'production',
     devtool: isDevelopment ? 'eval-source-map' : 'source-map',
@@ -16,7 +17,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
         modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
     },
-    
+   
     devServer: {
         static: path.resolve(__dirname, 'public'),
     },
